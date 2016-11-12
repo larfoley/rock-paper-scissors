@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Rock, Paper, Scissors</title>
+     <script src="https://use.fontawesome.com/e175f0cc50.js"></script>
+     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+     <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+
+    <div id="app"></div>
+
+    <!--
+    ==================================
+     TEMPLATES
+    ==================================
+    -->
+
+    <script id="home" type="text/x-handlebars-template">
+      <header class="app-header">
+        <h1 class="app-title">Rock, Paper, Scissors</h1>
+      </header>
+      <div class="u-text-center">
+
+        <button class="play button">Play</button>
+
+      </div>
+
+    </script>
+
+    <script id="play" type="text/x-handlebars-template">
+      <header class="app-header">
+        <h1 class="app-title">Rock, Paper, Scissors</h1>
+      </header>
+      <div class="container">
+
+        <h2>Make your choice</h2>
+        <ul class="gestures u-text-center a-fade-in">
+
+          <li class="gesture isActive">
+            <i id="rock" class="rps gesture__icon fa fa-hand-rock-o fa-4x" aria-hidden="true"></i>
+          </li>
+          <li class="gesture isActive">
+            <i id="paper" class="gesture__icon fa fa-hand-paper-o fa-4x" aria-hidden="true"></i>
+          </li>
+          <li class="gesture isActive">
+            <i id="scissors" class="gesture__icon fa fa-hand-scissors-o fa-4x" aria-hidden="true"></i>
+          </li>
+
+        </ul>
+
+      </div>
+    </script>
+
+    <script id="result" type="text/x-handlebars-template">
+
+      <header class="app-header">
+        <h1 class="app-title">Rock, Paper, Scissors</h1>
+      </header>
+      <div class="container u-text-center">
+
+        <h2 class="result {{result.player_class}}">{{result.msg}}</h2>
+
+        <div class="gesture {{result.player_class}} {{result.player_choice}} a-fade-in">
+          <i class="gesture__icon fa fa-hand-{{result.player_choice}}-o fa-4x" aria-hidden="true"></i>
+        </div>
+        <span class="vs">VS</span>
+        <div class="gesture {{result.computer_class}} {{result.computer_choice}} a-fade-in">
+          <i class="gesture__icon fa fa-hand-{{result.computer_choice}}-o fa-4x" aria-hidden="true"></i>
+        </div>
+
+        <p class="u-text-lead">{{result.explanation}}</p>
+
+        <button class="play button">Play Agian?</button>
+
+      </div>
+
+    </script>
+
+    <!--
+    ==================================
+      END OF TEMPLATES
+    ==================================
+    -->
+
+    <script src="handlebars.js" charset="utf-8"></script>
+    <script src="app.js" charset="utf-8"></script>
+
+  </body>
+</html>

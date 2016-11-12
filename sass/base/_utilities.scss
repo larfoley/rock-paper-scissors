@@ -1,0 +1,55 @@
+.container {
+  width: $container-width;
+  max-width: $container-max-width;
+  margin: 0 auto;
+  // background: white;
+}
+
+.u-clearfix {
+  /* IE-6 */
+  *zoom: 1;
+  &:after, &:before {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.u-float-left {
+  float:left;
+}
+
+.u-float-right {
+  float: right;
+}
+
+.u-text-lead {
+  font-size: 1.3em; 
+}
+
+.u-text-right {
+  text-align: right;
+}
+
+.u-text-left {
+  text-align: left;
+}
+
+.u-text-center {
+  text-align: center;
+}
+
+.u-text-uppercase {
+  text-transform: uppercase;
+}
+
+.u-invisible {
+  visibility: hidden;
+}
+
+.u-big-title {
+  font-size: 3em;
+  margin-bottom: 0;
+}
